@@ -1,0 +1,18 @@
+<div *ngIf="showDebitDetails">
+    <h2 class="popup">Debit Transactions</h2>
+    <!-- <p>Total Balance: {{}}</p> -->
+    <table class="gridList">  
+        <tr>  
+          <th>SNo</th>  
+          <th>Debit Amount</th>  
+          <th>Total Balance</th>
+        </tr>  
+        
+        <tr *ngFor="let item of debitTransactions; let i=index">  
+          <td>{{i+1}}</td>  
+          <td>{{item.DebitAmount }}</td>  
+          <td>{{item.TotalAmount}}</td> 
+        </tr>  
+      </table> 
+    <button class="close-button" (click)="showDebitAmountDetails(); emitDebitTransactions(debitTransactions)" >Close</button>
+</div>

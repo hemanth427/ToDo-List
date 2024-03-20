@@ -1,0 +1,22 @@
+
+<div *ngIf="showCreditDetails" class="transfer-container">
+    <!-- <p>Total Balance:{{userTransactions.totalBalance}}</p> -->
+    <h2 class="popup">Transfer</h2>
+        <button class="transfer-send-button" (click)="showSendInputBox()">Send</button>
+        <div *ngIf="transferSendCloseButton">
+        <label class="send-input-box" *ngIf="sendInputBox">
+            <input type="text" placeholder=" Enter amount to be debited" class="send-input-text-box" [(ngModel)]="debitAmount" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)">
+            <button class="send-input-proceed-button" (click)="addDebitRecord(); sendAccountBalance(userTransactions.totalBalance)" >Proceed</button>
+            <button class="send-input-close-button" (click)="transferSendClose()">Close</button>
+        </label>
+        </div>
+        <button class="transfer-receive-button" (click)="showReceiveInputBox()">Receive</button>
+        <div *ngIf="transferReceiveCloseButton">
+        <label class="receive-input-box" *ngIf="receiveInputBox">
+            <input type="number" pattern=”[0–9]*” placeholder="Enter amount to be credited" class="receive-input-text-box" [(ngModel)]="creditAmount" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)">
+            <button class="receive-input-proceed-button" (click)="addCreditRecord()">Proceed</button>
+            <button class="receive-input-close-button" (click)="transferReceiveClose()">Close</button>
+        </label>
+    </div>
+    <button class="close-button" (click)="onNoClick()" routerLink="/mainPage">Close</button>
+</div>

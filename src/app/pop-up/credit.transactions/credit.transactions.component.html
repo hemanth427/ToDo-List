@@ -1,0 +1,23 @@
+<div>
+    <h2 class="popup">Credit Transactions</h2>
+    <table class="gridList">  
+        <tr>  
+          <th>SNo</th>  
+          <th>Credit Amount</th>  
+          <th>Total Balance</th>
+        </tr>  
+        
+        <tr *ngFor="let item of creditTransactions; let i=index">  
+          <td>{{i+1}}</td>  
+          <td>{{item.DebitAmount }}</td>  
+          <td>{{item.TotalAmount}}</td> 
+        </tr>  
+      </table>
+    <!-- <button (click)="showAmount()">Show Amount</button> -->
+    <button class="close-button" routerLink="/mainPage">Close</button>
+</div>
+
+<!-- <div>
+    <h2 class="popup">Credit Transactions</h2>
+    <button class="close-button">Close</button>
+</div> -->

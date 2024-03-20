@@ -1,0 +1,110 @@
+<div class="entire" *ngIf="!isSuccessful">
+<!-- <div class="entire" > -->
+    <h2 class="title">India's Most Loved Payments App</h2>
+    <div >
+    <div><img src="assets/download.png" alt="" class="logo"></div>
+    <div class="credentials">
+        <div class="a"> 
+          User Name:   <input type="text" name="User Name" placeholder="Enter your name" id="UserName" [(ngModel)]="currentUser" class="input-text" tabindex="1">
+        </div>
+        <p></p>
+        <div class="a">
+          Account No:  <input type="text" name="Account No" placeholder="Enter Account Number" id="AccountNo" [(ngModel)]="Accountno" class="input-text" tabindex="2">
+        </div>
+        <p></p>
+        <div class="a">
+          Password:    <input type="password" name="Password" placeholder="Enter Password" id="Password" [(ngModel)]="password" class="input-text" tabindex="3" minlength="5">
+        </div> 
+        <p></p>
+        <button (click)='validateUser()' tabindex="4" id="enter-btn" >Login</button>
+        <p></p>
+        <p  class="warning-note" *ngIf="credentials_check">Please Enter correct credentials</p>
+        </div>
+                <!-- <div class="app-overview-container">
+          <div>
+            <h1 class="app-overvied-heading">Simple, Fast & Secure</h1>
+            <div class="app-overview-item">
+              <div>
+                <h1>One app for all things money</h1>
+              </div>
+              <p>
+                Pay bills, recharge, send money, buy gold, invest and shop at your favourite stores.
+              </p>
+            </div>
+            <span class="content-bar"></span>
+          </div>
+          <div class="app-overview-item">
+            <div>
+              <h1>Pay whenever you like, wherever you like</h1>
+            </div>
+            <p>
+              Choose from options like UPI, the PhonePe wallet or your Debit and Credit Card.
+            </p>
+          </div>
+          <span class="content-bar"></span>
+        </div>
+        <div class="app-overview-item">
+          <div>
+            <h1>Find all your favourite apps on PhonePe Switch</h1>
+          </div>
+          <p>
+            Book flights, order food or buy groceries. Use all your favourite apps without downloading them.
+          </p>
+        </div>
+        <span class="content-bar"></span> -->
+      </div>
+        </div>
+        <div class="copyRight" *ngIf="!isSuccessful">
+            <span>&copy;, All Rights Reserved</span>
+        </div>
+
+<!-- 
+<nav class="navbar navbar-expand-lg bg-body-tertiary" *ngIf="isSuccessful">
+ <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Credit Card</a></li>
+              <li><a class="dropdown-item" href="#">Debit Card</a></li>
+              <li><a class="dropdown-item" href="#">Transfer</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  
+  <!-- <main-page *ngIf="isSuccessful"
+          [Name]="currentUser"
+          [AccountNumber]="Accountno">
+  </main-page> -->
+
+
+<!-- <script>
+  let passwordInput = document.getElementById("password");
+  let btnClick = document.getElementById("enter-btn");
+
+passwordInput?.addEventListener("keyup",function(event){
+    if(event.keyCode===13){
+        event.preventDefault();
+        btnClick?.click();
+    }
+})
+</script> -->

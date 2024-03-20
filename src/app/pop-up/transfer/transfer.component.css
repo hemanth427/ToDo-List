@@ -1,0 +1,140 @@
+/*
+.popup{
+    display: block;
+    position: fixed;
+    background-color: violet;
+    color: black;
+    border: 2px solid;
+    bottom: 50px;
+    top: 200px;
+    left: 300px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+*/
+.transfer-container {
+    height: 300px;
+}
+.popup{
+    text-align: center;
+}
+.close-button{
+    position: absolute;
+    top: 180px;
+    left: 132px;
+}
+.transfer-sub-section {
+    display: flex;
+    flex-direction: column;
+}
+.send-receive-container {
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+}
+.transfer-popup {
+    display: flex;
+
+}
+.transfer-send-button{
+    position: absolute;
+    left: 100px;
+    bottom: 190px;
+}
+
+.transfer-receive-button{
+  position: absolute;
+  bottom: 190px;
+  left: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.send-input-box{
+    display: block;
+    position: fixed;
+    background-color: rgb(235, 103, 103);
+    color: black;
+    border: 2px solid;
+    bottom: 50px;
+    top: 250px;
+    left: 800px;
+    width: 218px;
+    border-radius: 34px;
+    height: 125px;
+    text-align: center;
+    float: right;
+
+}
+
+.send-input-text-box {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    height: 30px;
+    border-radius: 12px;
+}
+
+.receive-input-box{
+    display: block;
+    position: fixed;
+    background-color: lightgreen;
+    color: black;
+    border: 2px solid;
+    bottom: 50px;
+    top: 250px;
+    left: 800px;
+    width: 218px;
+    border-radius: 34px;
+    height: 125px;
+    text-align: center;
+    float: right;
+}
+
+.receive-input-text-box {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    height: 30px;
+    border-radius: 12px;
+}
+
+.send-input-proceed-button {
+    position: absolute;
+    left: 25px;
+    top: 75px;
+    border-radius: 3px;
+}
+
+.send-input-close-button {
+    position: absolute;
+    left: 132px;
+    top: 75px;
+    border-radius: 3px;
+}
+
+.receive-input-proceed-button {
+    position: absolute;
+    left: 25px;
+    top: 75px;
+    border-radius: 3px;
+}
+
+.receive-input-close-button {
+    position: absolute;
+    left: 132px;
+    top: 75px;
+    border-radius: 3px;
+}
+
+.mdc-dialog__container{
+        height: 230px;
+        width: 323px;
+}
+
+

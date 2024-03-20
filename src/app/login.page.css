@@ -1,0 +1,66 @@
+
+.credentials{
+    display: inline-block;
+    position: absolute;
+    padding: 275px 0;
+    left: 25vh;
+    text-align: center; 
+}
+
+.title{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 105px;
+    left: 90px;
+}
+
+.logo{
+    display: flex;
+    padding: 250px;
+    position: absolute;
+    top: -37vh;
+    left: -38vh;
+    width: 784px;
+}
+
+.entire{
+    background-image: url("../assets/bgimg.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.a{
+    text-align: right;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.copyRight{
+    position: absolute;
+    bottom: 50px;
+    right: 665px;
+    color: white;
+}
+.navbar{
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .app-overview-container {
+    margin-bottom: -50px;
+    margin-top: 30px;
+}
+.warning-note {
+    color: red;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+

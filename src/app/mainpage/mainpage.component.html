@@ -1,0 +1,104 @@
+<h3 class="account-Details-tag">Account Details</h3>
+<h3 class="app-info-tag">App Info</h3>
+<div class="userDetails">
+    <form action="">
+        <div>
+            <label for="fname">Name: {{UserValidation.UserName}}</label>
+        </div>
+        <p></p>
+        <div class="account-number-container">
+            <label for="accountNo" class="account-number-label">Account No:</label>
+            <span class="account-number" *ngIf="showAccountNumber">{{UserValidation.AccountNo}}</span>
+            <span class="account-number" *ngIf="!showAccountNumber">*********</span>
+            <button class="showbutton" (click)='showAccNODetails()'>{{showAccountNumber? 'Hide':'Show'}}</button>
+        </div>
+        <p></p>
+        <div class="account-balance-container">
+            <label for="balance" class="account-balance-label">Account Balance:</label>
+            <span class="account-balance">{{userDetails.totalBalance}}</span>
+            <!-- <span class="account-balance" *ngIf="showAccountBalance">{{userDetails.totalBalance}}</span> -->
+            <!-- <span class="account-balance" *ngIf="!showAccountBalance">********</span>
+            <button class="showbutton" (click)='showAccBalDetails()'>{{showAccountBalance? 'Hide':'Show'}}</button> -->
+        </div>
+        <p></p>
+        <div>
+            <label for="ifscCode">IFSC Code: {{IfscCode}}</label>
+        </div>
+        <p></p>
+        <div>
+            <label for="brabch">Branch: {{BranchName}}</label>
+        </div>
+        <p></p>
+    </form>
+</div>
+
+<div class="services-container">
+    <h2 class="credit-card-label">
+        Services
+    </h2>
+    <!-- <button (click)="openDialog()">
+        Credit Card
+    </button> -->
+</div>
+<div>
+<div>
+    <button (click)="showCreditAmountDetails()" routerLink="/creditTrans" class="credit-details-button">Credit Details</button>
+</div>
+<div>
+    <button (click)="showDebitAmountDetails()" class="debit-details-button">Debit Details</button>
+</div>
+<div>
+    <button (click)="openModal()" class="transfer-details-button">Transfer</button>
+</div>
+</div>
+
+<h3 class="Mini-statements-title">Mini Statements</h3>
+<button class="show-Mini-Debit-Transaction-button" (click)='showDebitMiniTransactions()'>{{showMiniDebitTransactions? 'Hide':'Show'}}</button>
+<table class="debit-mini-transaction-list" *ngIf="showMiniDebitTransactions">  
+    <tr>  
+      <th>SNo</th>  
+      <th>Debit Amount</th>  
+      <th>Total Balance</th>
+    </tr>  
+    <tr *ngFor="let item of miniDebitTransaction; let i=index">  
+      <td>{{i+1}}</td>  
+      <td>{{item.DebitAmount }}</td>  
+      <td>{{item.TotalAmount}}</td> 
+    </tr>  
+  </table>
+  <!-- <input type="checkbox" ngModel="check">
+ 
+    <div *ngShow="check">
+    <h1 style="color:green">GeeksforGeeks</h1>
+    </div> -->
+  <!-- <label class="show-debit-transactions" *ngIf="showCreditDetails">
+    <input type="text" class="show-debit-transactions-password" [(ngModel)]="">
+    <button class="show-debit-transactions-proceed" (click)="" >Proceed</button>
+    <button class="show-debit-transactions-close" (click)="">Close</button>
+</label> -->
+
+<p class="appInfo">
+    Paynow started the Digital Revolution in India.<br>
+    And we went on to become India’s leading Payments App.<br>
+    Today, more than 20 Million merchants & businesses are <br>
+    powered by Paytm to Accept Payments digitally.<br>
+    This is because more than 300 million Indians use <br> 
+    Paytm to Pay at their stores. And that’s not all, Paytm<br> 
+    App is used to Pay bills, do Recharges, Send money to friends<br>
+    & family, Book movies & travel tickets.<br>
+    With innovations to Financial services & products in pipeline,<br>
+    this is but one of the milestones achieved towards our <br>
+    mission—To bring 500 million unserved and underserved Indians <br>
+    to the mainstream economy.
+</p>
+<!-- <p>name: {{Name}}</p>
+<p>accountNum: {{AccountNumber}}</p> -->
+
+<!-- <app-transfer *ngIf="transferClicked"
+    (newBalance)="updatedBalance($event)">
+
+</app-transfer> -->
+
+<app-debit-transactions *ngIf="showCreditDetails"
+    (debitTrans)="miniDebitTrans($event)">
+</app-debit-transactions>

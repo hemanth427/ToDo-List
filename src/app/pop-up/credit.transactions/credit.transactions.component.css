@@ -1,0 +1,25 @@
+.popup{
+    display: block;
+    position: fixed;
+    background-color: violet;
+    color: black;
+    border: 2px solid;
+    bottom: 50px;
+    top: 200px;
+    left: 300px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+.close-button{
+    position: fixed;
+    top: 460px;
+    left: 418px;
+}
+
+.gridList{
+   border: 2px solid;
+    position: absolute;
+    left: 335px;
+    top: 253px;
+}
